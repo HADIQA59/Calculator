@@ -29,7 +29,10 @@
     return str;
   }
 
- 
+  function updateDisplay() {
+    tapeCurrentEl.textContent = state.display;
+    tapeScrollEl.scrollLeft = tapeScrollEl.scrollWidth;
+  }
 
   function setOperatorHighlight(key) {
     document.querySelectorAll('.key--op').forEach(k => k.classList.remove('is-selected'));
