@@ -142,7 +142,14 @@
     updateDisplay();
   }
 
-  
+  function handleDecimal() {
+    inputDigit('.');
+  }
+
+  function pullLever() {
+    lever.classList.add('pulled');
+    setTimeout(() => lever.classList.remove('pulled'), 220);
+  }
 
   // ---- Event wiring ----
 
