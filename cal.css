@@ -62,7 +62,7 @@ body {
   padding: 0 14px;
   height: 132px;
   overflow: hidden;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.5) inset;
+  box-shadow: 0 6px 14px rgba(3, 3, 3, 0.5) inset;
 }
 
 .tape-edge {
