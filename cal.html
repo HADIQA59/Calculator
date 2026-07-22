@@ -1,0 +1,81 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger — Adding Machine Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cal.css">
+</head>
+<body>
+
+  <main class="machine" aria-label="Ledger calculator">
+
+    <!-- Paper tape -->
+    <section class="tape-window" aria-label="Calculation tape">
+      <div class="tape-edge" aria-hidden="true"></div>
+      <div class="tape-scroll" id="tapeScroll">
+        <ol class="tape-log" id="tapeLog" aria-live="off"></ol>
+        <div class="tape-current" id="tapeCurrent" aria-live="polite">0</div>
+      </div>
+      <div class="tape-fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- Brass nameplate -->
+    <div class="nameplate">
+      <span class="nameplate-text">LEDGER · No. 7</span>
+      <span class="mode-indicator" id="modeIndicator" aria-hidden="true"></span>
+    </div>
+
+    <!-- Keypad -->
+    <section class="keypad" aria-label="Calculator keys">
+
+      <div class="key-row">
+        <button class="key key--func" data-action="clear" aria-label="All clear">AC</button>
+        <button class="key key--func" data-action="backspace" aria-label="Backspace">⌫</button>
+        <button class="key key--func" data-action="percent" aria-label="Percent">%</button>
+        <button class="key key--op" data-action="divide" aria-label="Divide">÷</button>
+      </div>
+
+      <div class="key-row">
+        <button class="key key--num" data-num="7">7</button>
+        <button class="key key--num" data-num="8">8</button>
+        <button class="key key--num" data-num="9">9</button>
+        <button class="key key--op" data-action="multiply" aria-label="Multiply">×</button>
+      </div>
+
+      <div class="key-row">
+        <button class="key key--num" data-num="4">4</button>
+        <button class="key key--num" data-num="5">5</button>
+        <button class="key key--num" data-num="6">6</button>
+        <button class="key key--op" data-action="subtract" aria-label="Subtract">−</button>
+      </div>
+
+      <div class="key-row">
+        <button class="key key--num" data-num="1">1</button>
+        <button class="key key--num" data-num="2">2</button>
+        <button class="key key--num" data-num="3">3</button>
+        <button class="key key--op" data-action="add" aria-label="Add">+</button>
+      </div>
+
+      <div class="key-row key-row--last">
+        <button class="key key--num key--zero" data-num="0">0</button>
+        <button class="key key--num" data-action="decimal">.</button>
+        <button class="key key--equals" data-action="equals" aria-label="Equals">=</button>
+      </div>
+
+    </section>
+
+    <div class="lever" id="lever" aria-hidden="true">
+      <div class="lever-arm"></div>
+      <div class="lever-knob"></div>
+    </div>
+
+  </main>
+
+<script src="cal.js"></script>
+</body>
+</html>
+   
