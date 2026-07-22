@@ -18,10 +18,18 @@
     lastOpKey: null       // reference to the currently-selected operator button
   };
 
-  function updateDisplay() {
-    tapeCurrentEl.textContent = state.display;
-    tapeScrollEl.scrollLeft = tapeScrollEl.scrollWidth;
+  function formatNumber(num) {
+    if (!isFinite(num)) return 'Error';
+    // Trim floating point noise, cap length
+    let str = String(Math.round(num * 1e10) / 1e10);
+    if (str.length > MAX_DIGITS + 1 && str.includes('.')) {
+      str = num.toPrecision(MAX_DIGITS - String(Math.trunc(num)).length);
+      str = String(parseFloat(str));
+    }
+    return str;
   }
+
+ 
 
   function setOperatorHighlight(key) {
     document.querySelectorAll('.key--op').forEach(k => k.classList.remove('is-selected'));
