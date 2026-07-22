@@ -39,7 +39,19 @@ body {
   font-family: var(--font-ui);
 }
 
-
+.machine {
+  position: relative;
+  width: 360px;
+  max-width: 100%;
+  background: linear-gradient(160deg, var(--felt-light), var(--felt) 40%, var(--felt-dark));
+  border-radius: 22px;
+  padding: 20px 20px 28px;
+  box-shadow:
+    0 30px 60px -20px rgba(0,0,0,0.7),
+    0 2px 0 rgba(255,255,255,0.04) inset,
+    0 -2px 20px rgba(0,0,0,0.4) inset;
+  border: 1px solid rgba(0,0,0,0.4);
+}
 
 /* ---------- Tape ---------- */
 
